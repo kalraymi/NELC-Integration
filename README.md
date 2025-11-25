@@ -98,9 +98,41 @@ All JSON statements are converted into valid Markdown fenced code blocks:
   },
   "verb": {
     "id": "http://adlnet.gov/expapi/verbs/registered",
-    "display": {"en-US": "registered"}
+    "display": { "en-US": "registered" }
   },
-  ...
+  "object": {
+    "id": "http://www.UDEMY.com/course/CR001",
+    "definition": {
+      "name": { "en-US": "مادة الرياضيات" },
+      "description": { "en-US": "Math-sixth class-First semester" },
+      "type": "https://w3id.org/xapi/cmi5/activitytype/course"
+    },
+    "objectType": "Activity"
+  },
+  "context": {
+    "instructor": {
+      "name": "Ibrahim Khalid",
+      "mbox": "mailto:ik@example.com"
+    },
+    "platform": "MGMT-003",
+    "language": "ar-SA",
+    "extensions": {
+      "https://nelc.gov.sa/extensions/duration": "PT30H00M00S",
+      "https://nelc.gov.sa/extensions/lms_url": "http://www.lmsname.com",
+      "https://nelc.gov.sa/extensions/program_url": "http://www.lmsname.com/course/1234",
+      "https://nelc.gov.sa/extensions/learner_mobile_no": "+96655995959559",
+      "https://nelc.gov.sa/extensions/learner_full_name": "عبدالرحمن محمد",
+      "https://nelc.gov.sa/extensions/learner_nationality": "Saudi Arabia",
+      "https://nelc.gov.sa/extensions/date_of_birth": "18/06/1998",
+      "https://nelc.gov.sa/extensions/platform": {
+        "name": {
+          "ar-SA": "التقنيات المتقدمة للتدريب",
+          "en-US": "Leading Tech for Training"
+        }
+      }
+    }
+  },
+  "timestamp": "2022-01-31T07:18:32.829Z"
 }
 ```
 ### Statement #2 — **initialized**
@@ -111,7 +143,36 @@ All JSON statements are converted into valid Markdown fenced code blocks:
     "name": "1234567890",
     "objectType": "Agent"
   },
-  ...
+  "verb": {
+    "id": "http://adlnet.gov/expapi/verbs/initialized",
+    "display": { "en-US": "initialized" }
+  },
+  "object": {
+    "id": "http://www.lmsname.com/course/CR001",
+    "definition": {
+      "name": { "en-US": "Java for Beginners" },
+      "description": { "en-US": "" },
+      "type": "https://w3id.org/xapi/cmi5/activitytype/course"
+    },
+    "objectType": "Activity"
+  },
+  "context": {
+    "instructor": {
+      "name": "Ibrahim Khalid",
+      "mbox": "mailto:ik@example.com"
+    },
+    "platform": "MGMT-003",
+    "language": "ar-SA",
+    "extensions": {
+      "https://nelc.gov.sa/extensions/platform": {
+        "name": {
+          "ar-SA": "التقنيات المتقدمة للتدريب",
+          "en-US": "Leading Tech for Training"
+        }
+      }
+    }
+  },
+  "timestamp": "2022-01-31T07:18:32.829Z"
 }
 ```
 
@@ -123,26 +184,241 @@ All JSON statements are converted into valid Markdown fenced code blocks:
     "name": "1234567890",
     "objectType": "Agent"
   },
-  ...
+  "verb": {
+    "id": "https://w3id.org/xapi/acrossx/verbs/watched",
+    "display": { "en-US": "watched" }
+  },
+  "object": {
+    "id": "http://www.lmsname.com/course/CR001/module/MDL002/video/VD003",
+    "definition": {
+      "name": { "en-US": "Java for Beginners - Unit 2 Video3 Intro to Java" },
+      "description": { "en-US": "concepts and skills" },
+      "type": "https://w3id.org/xapi/video/activity-type/video"
+    },
+    "objectType": "Activity"
+  },
+  "context": {
+    "instructor": {
+      "name": "Ibrahim Khalid",
+      "mbox": "mailto:ik@example.com"
+    },
+    "platform": "MGMT-003",
+    "language": "ar-SA",
+    "extensions": {
+      "http://id.tincanapi.com/extension/browser-info": {
+        "code_name": "Mozilla",
+        "name": "Firefox",
+        "version": "5.0"
+      },
+      "https://nelc.gov.sa/extensions/platform": {
+        "name": {
+          "ar-SA": "التقنيات المتقدمة للتدريب",
+          "en-US": "Leading Tech for Training"
+        }
+      }
+    },
+    "contextActivities": {
+      "parent": [
+        {
+          "id": "http://www.lmsname.com/course/CR001",
+          "definition": {
+            "name": { "en-US": "Java for Beginners" },
+            "description": { "en-US": "" },
+            "type": "https://w3id.org/xapi/cmi5/activitytype/course"
+          },
+          "objectType": "Activity"
+        }
+      ]
+    }
+  },
+  "result": {
+    "completion": true,
+    "duration": "PT00H10M22S"
+  },
+  "timestamp": "2022-01-31T07:18:32.829Z"
 }
 ```
+
 ### Statement #4 — **completed lesson**
 ```
 {
-  "actor": { ... },
-  "verb": { ... },
-  "object": { ... },
+  "actor": {
+    "mbox": "mailto:1234567890@gmail.com",
+    "name": "1234567890",
+    "objectType": "Agent"
+  },
+  "verb": {
+    "id": "http://adlnet.gov/expapi/verbs/completed",
+    "display": { "en-US": "completed" }
+  },
+  "object": {
+    "id": "http://www.lmsname.com/course/CR001/module/MDL002/lesson/LSN001",
+    "definition": {
+      "name": { "en-US": "Java for Beginners - Unit 1 Video1 Introduction to Java" },
+      "description": { "en-US": "lesson objectives and concepts" },
+      "type": "http://adlnet.gov/expapi/activities/lesson"
+    },
+    "objectType": "Activity"
+  },
+  "context": {
+    "instructor": {
+      "name": " Ibrahim Khalid ",
+      "mbox": "mailto:ik@example.com"
+    },
+    "platform": "MGMT-003",
+    "language": "ar-SA",
+    "extensions": {
+      "http://id.tincanapi.com/extension/browser-info": {
+        "code_name": "Mozilla",
+        "name": "Firefox",
+        "version": "5.0"
+      },
+      "https://nelc.gov.sa/extensions/platform": {
+        "name": {
+          "ar-SA": "التقنيات المتقدمة للتدريب",
+          "en-US": "Leading Tech for Training"
+        }
+      }
+    },
+    "contextActivities": {
+      "parent": [
+        {
+          "id": "http://www.lmsname.com/course/CR001",
+          "definition": {
+            "name": { "en-US": "Java for Beginners" },
+            "description": { "en-US": "" },
+            "type": "https://w3id.org/xapi/cmi5/activitytype/course"
+          },
+          "objectType": "Activity"
+        }
+      ]
+    }
+  },
   "result": {
     "duration": "PT00H05M00S"
-  }
+  },
+  "timestamp": "2022-01-31T07:18:32.829Z"
 }
 ```
-### Statement #5 — **attempted**
+### Statement #5 — **attended**
 ```
 {
-  "actor": { ... },
-  "verb": { ... },
-  "object": { ... },
+  "actor": {
+    "mbox": "mailto:1234567890@gmail.com",
+    "name": "1234567890",
+    "objectType": "Agent"
+  },
+  "verb": {
+    "id": "http://adlnet.gov/expapi/verbs/attended",
+    "display": { "en-US": "attended" }
+  },
+  "object": {
+    "id": "http://www.lmsname.com/course/CR001/module/MDL002/virtual-classroom/VD003",
+    "definition": {
+      "name": { "en-US": "Java for Beginners - Unit 2 - Practical lesson" },
+      "description": { "en-US": "concepts and skills" },
+      "type": "https://w3id.org/xapi/virtual-classroom/activity-types/virtual-classroom"
+    },
+    "objectType": "Activity"
+  },
+  "context": {
+    "instructor": {
+      "name": " Ibrahim Khalid ",
+      "mbox": "mailto:ik@example.com"
+    },
+    "platform": "MGMT-003",
+    "language": "ar-SA",
+    "extensions": {
+      "http://id.tincanapi.com/extension/browser-info": {
+        "code_name": "Mozilla",
+        "name": "Firefox",
+        "version": "5.0"
+      },
+      "https://nelc.gov.sa/extensions/platform": {
+        "name": {
+          "ar-SA": "التقنيات المتقدمة للتدريب",
+          "en-US": "Leading Tech for Training"
+        }
+      }
+    },
+    "contextActivities": {
+      "parent": [
+        {
+          "id": "http://www.lmsname.com/course/CR001",
+          "definition": {
+            "name": { "en-US": "Java for Beginners" },
+            "description": { "en-US": "" },
+            "type": "https://w3id.org/xapi/cmi5/activitytype/course"
+          },
+          "objectType": "Activity"
+        }
+      ]
+    }
+  },
+  "result": {
+    "completion": true,
+    "duration": "PT01H30M00S"
+  },
+  "timestamp": "2022-01-31T07:18:32.829Z"
+}
+```
+
+### Statement #6 — **attempted**
+```
+{
+  "actor": {
+    "mbox": "mailto:1234567890@gmail.com",
+    "name": "1234567890",
+    "objectType": "Agent"
+  },
+  "verb": {
+    "id": "http://adlnet.gov/expapi/verbs/attempted",
+    "display": { "en-US": "attempted" }
+  },
+  "object": {
+    "id": "http://www.lmsname.com/course/CR001/module/MDL001/quiz/QZ001",
+    "definition": {
+      "name": { "en-US": "Java Crash Course unit - 1 Quiz -1" },
+      "description": { "en-US": "Java Crash Course unit - 1 Quiz -1" },
+      "type": "http://id.tincanapi.com/activitytype/unit-test"
+    },
+    "objectType": "Activity"
+  },
+  "context": {
+    "instructor": {
+      "name": " Ibrahim Khalid",
+      "mbox": "mailto:ik@example.com"
+    },
+    "platform": "MGMT-003",
+    "language": "ar-SA",
+    "extensions": {
+      "http://id.tincanapi.com/extension/attempt-id": 1,
+      "http://id.tincanapi.com/extension/browser-info": {
+        "code_name": "Mozilla",
+        "name": "Firefox",
+        "version": "5.0"
+      },
+      "https://nelc.gov.sa/extensions/platform": {
+        "name": {
+          "ar-SA": "التقنيات المتقدمة للتدريب",
+          "en-US": "Leading Tech for Training"
+        }
+      }
+    },
+    "contextActivities": {
+      "parent": [
+        {
+          "id": "http://www.lmsname.com/course/CR001",
+          "definition": {
+            "name": { "en-US": "Java for Beginners" },
+            "description": { "en-US": "" },
+            "type": "https://w3id.org/xapi/cmi5/activitytype/course"
+          },
+          "objectType": "Activity"
+        }
+      ]
+    }
+  },
   "result": {
     "score": {
       "scaled": 0.60,
@@ -152,33 +428,314 @@ All JSON statements are converted into valid Markdown fenced code blocks:
     },
     "success": true,
     "completion": false
-  }
+  },
+  "timestamp": "2022-01-31T07:18:32.829Z"
 }
 ```
 
 ### Statement #7 — **completed module**
-```{ ... }```
+```
+{
+  "actor": {
+    "mbox": "mailto:1234567890@gmail.com",
+    "name": "1234567890",
+    "objectType": "Agent"
+  },
+  "verb": {
+    "id": "http://adlnet.gov/expapi/verbs/completed",
+    "display": { "en-US": "completed" }
+  },
+  "object": {
+    "id": "http://www.lmsname.com/course/CR001/module/MDL002",
+    "definition": {
+      "name": { "en-US": "Java for Beginners - Unit 1 Basics of Java" },
+      "description": { "en-US": "Unit Objectives" },
+      "type": "http://adlnet.gov/expapi/activities/module"
+    },
+    "objectType": "Activity"
+  },
+  "context": {
+    "instructor": {
+      "name": " Ibrahim Khalid ",
+      "mbox": "mailto:ik@example.com"
+    },
+    "platform": "MGMT-003",
+    "language": "ar-SA",
+    "extensions": {
+      "http://id.tincanapi.com/extension/browser-info": {
+        "code_name": "Mozilla",
+        "name": "Firefox",
+        "version": "5.0"
+      },
+      "https://nelc.gov.sa/extensions/platform": {
+        "name": {
+          "ar-SA": "التقنيات المتقدمة للتدريب",
+          "en-US": "Leading Tech for Training"
+        }
+      }
+    },
+    "contextActivities": {
+      "parent": [
+        {
+          "id": "http://www.lmsname.com/course/CR001",
+          "definition": {
+            "name": { "en-US": "Java for Beginners" },
+            "description": { "en-US": "" },
+            "type": "https://w3id.org/xapi/cmi5/activitytype/course"
+          },
+          "objectType": "Activity"
+        }
+      ]
+    }
+  },
+  "timestamp": "2022-01-31T07:18:32.829Z"
+}
+```
 
 ### Statement #8 — **progressed**
 ```
-{ ... }
+{
+  "actor": {
+    "mbox": "mailto:1234567890@gmail.com",
+    "name": "1234567890",
+    "objectType": "Agent"
+  },
+  "verb": {
+    "id": "http://adlnet.gov/expapi/verbs/progressed",
+    "display": { "en-US": "progressed" }
+  },
+  "object": {
+    "id": "http://www.lmsname.com/course/CR001",
+    "definition": {
+      "name": { "en-US": "Java for Beginners" },
+      "description": { "en-US": "" },
+      "type": "https://w3id.org/xapi/cmi5/activitytype/course"
+    },
+    "objectType": "Activity"
+  },
+  "context": {
+    "instructor": {
+      "name": "Ibrahim Khalid",
+      "mbox": "mailto:ik@example.com"
+    },
+    "platform": "KSUX",
+    "language": "ar-SA",
+    "extensions": {
+      "https://nelc.gov.sa/extensions/platform": {
+        "name": {
+          "ar-SA": "التقنيات المتقدمة للتدريب",
+          "en-US": "Leading Tech for Training"
+        }
+      }
+    }
+  },
+  "result": {
+    "score": {
+      "scaled": 0.15
+    },
+    "completion": true
+  },
+  "timestamp": "2022-01-31T07:18:32.829Z"
+}
 ```
 
-### Statement #33 — **completed course**
+### Statement #9 — **completed course**
 ```
-{ ... }
+{
+  "actor": {
+    "mbox": "mailto:1234567890@gmail.com",
+    "name": "1234567890",
+    "objectType": "Agent"
+  },
+  "verb": {
+    "id": "http://adlnet.gov/expapi/verbs/completed",
+    "display": { "en-US": "completed" }
+  },
+  "object": {
+    "id": "http://www.lmsname.com/course/CR001",
+    "definition": {
+      "name": { "en-US": "Java for Beginners" },
+      "description": { "en-US": "" },
+      "type": "https://w3id.org/xapi/cmi5/activitytype/course"
+    },
+    "objectType": "Activity"
+  },
+  "context": {
+    "instructor": {
+      "name": "Ibrahim Khalid",
+      "mbox": "mailto:ik@example.com"
+    },
+    "platform": "KSUX",
+    "language": "ar-SA",
+    "extensions": {
+      "https://nelc.gov.sa/extensions/platform": {
+        "name": {
+          "ar-SA": "التقنيات المتقدمة للتدريب",
+          "en-US": "Leading Tech for Training"
+        }
+      }
+    }
+  },
+  "timestamp": "2022-01-31T07:18:32.829Z"
+}
 ```
 
-### Statement #34 — **rated**
-```{ ... }
+### Statement #10 — **rated**
+```
+{
+  "actor": {
+    "mbox": "mailto:1234567890@gmail.com",
+    "name": "1234567890",
+    "objectType": "Agent"
+  },
+  "verb": {
+    "id": "http://id.tincanapi.com/verb/rated",
+    "display": { "en-US": "rated" }
+  },
+  "object": {
+    "id": "http://www.lmsname.com/course/CR001",
+    "definition": {
+      "name": { "en-US": "Java for Beginners" },
+      "description": { "en-US": "" },
+      "type": "https://w3id.org/xapi/cmi5/activitytype/course"
+    },
+    "objectType": "Activity"
+  },
+  "context": {
+    "instructor": {
+      "name": "Ibrahim Khalid",
+      "mbox": "mailto:ik@example.com"
+    },
+    "platform": "KSUX",
+    "language": "ar-SA",
+    "extensions": {
+      "https://nelc.gov.sa/extensions/platform": {
+        "name": {
+          "ar-SA": "التقنيات المتقدمة للتدريب",
+          "en-US": "Leading Tech for Training"
+        }
+      }
+    }
+  },
+  "result": {
+    "score": {
+      "scaled": 0.8,
+      "raw": 4,
+      "min": 0,
+      "max": 5
+    },
+    "response": "Text review written by the evaluator"
+  },
+  "timestamp": "2022-01-31T07:18:32.829Z"
+}
 ```
 
-### Statement #35 — **earned**
+### Statement #11 — **earned**
 ```
-{ ... }
+{
+  "actor": {
+    "mbox": "mailto:1234567890@gmail.com",
+    "name": "1234567890",
+    "objectType": "Agent"
+  },
+  "verb": {
+    "id": "http://id.tincanapi.com/verb/earned",
+    "display": { "en-US": "earned" }
+  },
+  "object": {
+    "id": "http://www.lmsname.com/course/CR001/certificate/CFT001",
+    "definition": {
+      "name": { "en-US": "Java level-1 Certificate" },
+      "type": "https://www.opigno.org/en/tincan_registry/activity_type/certificate"
+    },
+    "objectType": "Activity"
+  },
+  "context": {
+    "extensions": {
+      "http://id.tincanapi.com/extension/jws-certificate-location": "http://www.abc.com/cert/12341231",
+      "https://nelc.gov.sa/extensions/platform": {
+        "name": {
+          "ar-SA": "التقنيات المتقدمة للتدريب",
+          "en-US": "Leading Tech for Training"
+        }
+      }
+    },
+    "platform": "KSUX",
+    "language": "ar-SA",
+    "contextActivities": {
+      "parent": [
+        {
+          "id": "http://www.lmsname.com/course/CR001",
+          "definition": {
+            "name": { "en-US": "Java for Beginners" },
+            "description": { "en-US": "" },
+            "type": "https://w3id.org/xapi/cmi5/activitytype/course"
+          },
+          "objectType": "Activity"
+        }
+      ]
+    }
+  },
+  "timestamp": "2022-01-31T07:18:32.829Z"
+}
 ```
 
-### Statement # — **attended**
-```
-{ ... }
-```
+## Notes to Consider and Common Mistakes
+
+- The first event to be sent is the **"registered"** statement.
+- The **"initialized"** action is done when the learner performs the first action in the LMS after the "registered" event.
+- The **"watched"** video statement must be automatically sent **when the video ends**, without requiring any learner interaction such as clicking “Mark as complete.”
+- A learner activity must be **sent only once**.  
+  Duplicate statements are **not allowed**.
+- Course descriptions must **not contain HTML tags**.  
+  The same rule applies to all object descriptions.
+- Object descriptions must clearly describe the object.  
+  The **course description must be the full official description** from the LMS course card.
+- Instructor name must be accurate.  
+  Placeholder text, dummy data, or junk values are not accepted.
+- Video duration must be **exact**.
+- Lesson duration is the **estimated time** required to complete the lesson.
+- Lessons that are not videos or virtual classrooms—such as HTML pages or PDF reading materials—**must still be treated as lessons**.
+- The **"progress"** event should be sent:
+  - after lesson completion  
+  - after unit completion  
+  - after quiz attempts  
+  - and at any reasonable progress interval
+- The platform AR/EN names must be the official licensed names and must match exactly the values sent under:  
+  `https://nelc.gov.sa/extensions/platform`
+- There must be **minimal validation** for national ID input:  
+  it must be **10 digits** and begin with **1, 2, or 4** to comply with Saudi identification rules.
+
+---
+
+## Resources
+
+**Integration Service Providers:**  
+https://futurex.nelc.gov.sa/ar/partnerships/platform
+
+### Plugins (designed by NELC)
+
+- **WordPress / Laravel**
+- **PHP Laravel**  
+  https://github.com/nelc/laravel-lrs-package
+- **Laravel Helper**  
+  https://github.com/nelc/laravel-lrs-helpers
+- **LearnDash LMS**  
+  https://github.com/nelc/learndash-lrs-plugin/
+- **TutorLMS**  
+  https://github.com/nelc/tutor-lms-lrs-plugin
+
+> Note:  
+> `https://github.com/nelc/laravel-lrs-helpers` will be public soon.
+
+**Postman collection download:**  
+https://drive.google.com/file/d/161R5v58G3QxVG_0nfZGAWcan4nGL9EDz/view?usp=sharing
+
+---
+
+## Contact Us
+
+If you have any questions, contact the Integration Team:
+
+📧 integration@elc.edu.sa  
+📧 k.alraymi@elc.edu.sa
