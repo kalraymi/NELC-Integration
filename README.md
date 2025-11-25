@@ -724,8 +724,6 @@ https://futurex.nelc.gov.sa/ar/partnerships/platform
 - **TutorLMS**  
   https://github.com/nelc/tutor-lms-lrs-plugin
 
-> Note:  
-> `https://github.com/nelc/laravel-lrs-helpers` will be public soon.
 
 **Postman collection download:**  
 [MyFutureX.postman_collection](https://raw.githubusercontent.com/kalraymi/NELC-Integration/main/MyFutureX.postman_collection.json)
