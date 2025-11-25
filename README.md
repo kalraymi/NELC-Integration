@@ -728,7 +728,8 @@ https://futurex.nelc.gov.sa/ar/partnerships/platform
 > `https://github.com/nelc/laravel-lrs-helpers` will be public soon.
 
 **Postman collection download:**  
-https://drive.google.com/file/d/161R5v58G3QxVG_0nfZGAWcan4nGL9EDz/view?usp=sharing
+[MyFutureX.postman_collection](https://raw.githubusercontent.com/kalraymi/NELC-Integration/main/MyFutureX.postman_collection.json)
+
 
 ---
 
