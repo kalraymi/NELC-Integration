@@ -102,7 +102,6 @@ All JSON statements are converted into valid Markdown fenced code blocks:
   },
   ...
 }
-
 ```
 ### Statement #2 — **initialized**
 ```json
@@ -114,4 +113,72 @@ All JSON statements are converted into valid Markdown fenced code blocks:
   },
   ...
 }
+```
+
+### Statement #3 — **watched**
+```
+{
+  "actor": {
+    "mbox": "mailto:1234567890@gmail.com",
+    "name": "1234567890",
+    "objectType": "Agent"
+  },
+  ...
+}
+```
+### Statement #4 — **completed lesson**
+```
+{
+  "actor": { ... },
+  "verb": { ... },
+  "object": { ... },
+  "result": {
+    "duration": "PT00H05M00S"
+  }
+}
+```
+### Statement #5 — **attempted**
+```
+{
+  "actor": { ... },
+  "verb": { ... },
+  "object": { ... },
+  "result": {
+    "score": {
+      "scaled": 0.60,
+      "raw": 30,
+      "min": 20,
+      "max": 50
+    },
+    "success": true,
+    "completion": false
+  }
+}
+```
+
+### Statement #7 — **completed module**
+```{ ... }```
+
+### Statement #8 — **progressed**
+```
+{ ... }
+```
+
+### Statement #33 — **completed course**
+```
+{ ... }
+```
+
+### Statement #34 — **rated**
+```{ ... }
+```
+
+### Statement #35 — **earned**
+```
+{ ... }
+```
+
+### Statement # — **attended**
+```
+{ ... }
 ```
