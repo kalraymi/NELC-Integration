@@ -102,3 +102,15 @@ All JSON statements are converted into valid Markdown fenced code blocks:
   },
   ...
 }
+
+
+### Statement #2 — **initialized**
+```json
+{
+  "actor": {
+    "mbox": "mailto:1234567890@gmail.com",
+    "name": "1234567890",
+    "objectType": "Agent"
+  },
+  ...
+}
