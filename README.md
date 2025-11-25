@@ -56,8 +56,7 @@ It describes how to author an xAPI Profile using JSON-based semantic triples (su
 ---
 
 ## Guidelines
-- LMS must send minimum learner activity events needed to measure progress.
-- Backend authentication is mandatory — frontend authentication not accepted.
+- Backend API authentication is mandatory — frontend API authentication not accepted.
 - NELC provides endpoint credentials upon formal request.
 - Course completion types:
   - Passing unit quiz
