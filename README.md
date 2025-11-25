@@ -103,7 +103,7 @@ All JSON statements are converted into valid Markdown fenced code blocks:
   ...
 }
 
-
+```
 ### Statement #2 — **initialized**
 ```json
 {
@@ -114,3 +114,4 @@ All JSON statements are converted into valid Markdown fenced code blocks:
   },
   ...
 }
+```
