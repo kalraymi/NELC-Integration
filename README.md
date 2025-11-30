@@ -528,12 +528,7 @@ All JSON statements are converted into valid Markdown fenced code blocks:
       }
     }
   },
-  "result": {
-    "score": {
-      "scaled": 0.15
-    },
-    "completion": true
-  },
+
   "timestamp": "2022-01-31T07:18:32.829Z"
 }
 ```
