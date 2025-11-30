@@ -176,7 +176,7 @@ All JSON statements are converted into valid Markdown fenced code blocks:
 ```
 
 ### Statement #3 — **watched**
-```
+```json
 {
   "actor": {
     "mbox": "mailto:1234567890@gmail.com",
@@ -239,7 +239,7 @@ All JSON statements are converted into valid Markdown fenced code blocks:
 ```
 
 ### Statement #4 — **completed lesson**
-```
+```json
 {
   "actor": {
     "mbox": "mailto:1234567890@gmail.com",
@@ -300,7 +300,7 @@ All JSON statements are converted into valid Markdown fenced code blocks:
 }
 ```
 ### Statement #5 — **attended**
-```
+```json
 {
   "actor": {
     "mbox": "mailto:1234567890@gmail.com",
@@ -363,7 +363,7 @@ All JSON statements are converted into valid Markdown fenced code blocks:
 ```
 
 ### Statement #6 — **attempted**
-```
+```json
 {
   "actor": {
     "mbox": "mailto:1234567890@gmail.com",
@@ -433,7 +433,7 @@ All JSON statements are converted into valid Markdown fenced code blocks:
 ```
 
 ### Statement #7 — **completed module**
-```
+```json
 {
   "actor": {
     "mbox": "mailto:1234567890@gmail.com",
@@ -492,7 +492,7 @@ All JSON statements are converted into valid Markdown fenced code blocks:
 ```
 
 ### Statement #8 — **progressed**
-```
+```json
 {
   "actor": {
     "mbox": "mailto:1234567890@gmail.com",
@@ -539,7 +539,7 @@ All JSON statements are converted into valid Markdown fenced code blocks:
 ```
 
 ### Statement #9 — **completed course**
-```
+```json
 {
   "actor": {
     "mbox": "mailto:1234567890@gmail.com",
@@ -580,7 +580,7 @@ All JSON statements are converted into valid Markdown fenced code blocks:
 ```
 
 ### Statement #10 — **rated**
-```
+```json
 {
   "actor": {
     "mbox": "mailto:1234567890@gmail.com",
@@ -630,7 +630,7 @@ All JSON statements are converted into valid Markdown fenced code blocks:
 ```
 
 ### Statement #11 — **earned**
-```
+```json
 {
   "actor": {
     "mbox": "mailto:1234567890@gmail.com",
