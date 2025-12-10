@@ -118,8 +118,8 @@ All JSON statements are converted into valid Markdown fenced code blocks:
     "extensions": {
       "https://nelc.gov.sa/extensions/duration": "PT30H00M00S",
       "https://nelc.gov.sa/extensions/education_level": "[primary|intermediate|secondary|...]",  // For schools LMSs only
-      "https://nelc.gov.sa/extensions/education_year": [1|2|3|...],  // For schools LMSs only
-      "https://nelc.gov.sa/extensions/semester": [1|2|3],  // For schools LMSs only
+      "https://nelc.gov.sa/extensions/education_year": "[1|2|3|...]",  // For schools LMSs only
+      "https://nelc.gov.sa/extensions/semester": "[1|2|3]",  // For schools LMSs only
       "https://nelc.gov.sa/extensions/lms_url": "http://www.lmsname.com",
       "https://nelc.gov.sa/extensions/program_url": "http://www.lmsname.com/course/1234",
       "https://nelc.gov.sa/extensions/learner_mobile_no": "+96655995959559",
