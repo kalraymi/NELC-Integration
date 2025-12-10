@@ -72,6 +72,9 @@ It describes how to author an xAPI Profile using JSON-based semantic triples (su
   `http://id.tincanapi.com/extension/jws-certificate-location`
 - Videos are considered watched when 90% of duration is consumed.
 - Progress can be explicitly sent using the **progressed** verb.
+- All object IDs for course, lesson, video, module, etc must follow the naming convention below:
+  - Ex: http://www.lmsname.com/course/CR001/module/MD003/lesson/123423
+
 
 ---
 
