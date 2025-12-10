@@ -1,8 +1,5 @@
 # NELC-Integration
 # NELC — xAPI Profiles Guidelines  
-**Version 02 — 25-Nov-2025**  
-**NELC — Digital Transformation Department**
-
 ---
 
 ## Table of Contents
