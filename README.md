@@ -88,7 +88,7 @@ It describes how to author an xAPI Profile using JSON-based semantic triples (su
 All JSON statements are converted into valid Markdown fenced code blocks:
 
 ### Statement #1 — **registered**
-```json
+```jsonc
 {
   "actor": {
     "mbox": "mailto:1234567890@gmail.com",
