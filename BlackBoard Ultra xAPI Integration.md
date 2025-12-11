@@ -119,5 +119,174 @@ Tracks: university → college → department → program → course → section
       ]
     }
   },
+```
+
+2.2 Sample: Instructor Viewed Course Roster
+```json
+{
+  "actor": {
+    "objectType": "Agent",
+    "account": {
+      "homePage": "https://bb.example.com",
+      "name": "instructor_1123"
+    }
+  },
+  "verb": {
+    "id": "http://id.tincanapi.com/verb/viewed",
+    "display": {"en-US": "viewed"}
+  },
+  "object": {
+    "id": "https://bb.example.com/courses/ENG101-F23-001/roster",
+    "definition": {
+      "name": {"en-US": "Course Roster"},
+      "type": "http://adlnet.gov/expapi/activities/roster"
+    }
+  },
+  "context": {
+    "contextActivities": {
+      "grouping": [
+        { "id": "https://bb.example.com/institution/UniversityA" },
+        { "id": "https://bb.example.com/college/ArtsHumanities" },
+        { "id": "https://bb.example.com/course/ENG101" }
+      ],
+      "parent": [
+        { "id": "https://bb.example.com/section/ENG101-F23-001" }
+      ]
+    }
+  }
+}
+```
+
+## 2.3 Sample: Assignment Submitted
+```json
+{
+  "actor": {
+    "objectType": "Agent",
+    "account": { "name": "student_98321" }
+  },
+  "verb": {
+    "id": "http://adlnet.gov/expapi/verbs/submitted",
+    "display": {"en-US": "submitted"}
+  },
+  "object": {
+    "id": "https://bb.example.com/assignments/ENG101-F23-001/WritingTask1",
+    "definition": {
+      "name": {"en-US": "Writing Task 1"},
+      "type": "http://adlnet.gov/expapi/activities/assignment"}
+  },
+  "result": {
+    "completion": true,
+    "extensions": {
+      "https://bb.example.com/xapi/attemptId": "ATT-912931"
+    }
+  },
+  "context": {
+    "instructor": [
+      {
+        "objectType": "Agent",
+        "account": {"name": "instructor_1123"}
+      }
+    ],
+    "contextActivities": {
+      "grouping": [
+        { "id": "https://bb.example.com/institution/UniversityA" },
+        { "id": "https://bb.example.com/college/ArtsHumanities" },
+        { "id": "https://bb.example.com/program/BachelorEnglish" },
+        { "id": "https://bb.example.com/term/2023-Fall" }
+      ],
+      "parent": [
+        { "id": "https://bb.example.com/section/ENG101-F23-001" }
+      ]
+    }
+  }
+}
+```
+
+## 2.4 Sample: Content Viewed
+```json
+{
+  "actor": { "account": { "name": "student_333" }},
+  "verb": {
+    "id": "http://adlnet.gov/expapi/verbs/viewed",
+    "display": {"en-US": "viewed"}
+  },
+  "object": {
+    "id": "https://bb.example.com/courses/ENG101-F23-001/modules/module2/document7",
+    "definition": {
+      "name": {"en-US": "Grammar Basics"},
+      "type": "http://adlnet.gov/expapi/activities/document"
+    }
+  },
+  "context": {
+    "contextActivities": {
+      "grouping": [
+        { "id": "https://bb.example.com/institution/UniversityA" },
+        { "id": "https://bb.example.com/course/ENG101" }
+      ]
+    }
+  }
+}
+
+## 2.5 Sample: Instructor Posted to Discussion
+{
+  "actor": {
+    "objectType": "Agent",
+    "account": {"name": "instructor_1123"}
+  },
+  "verb": {
+    "id": "http://adlnet.gov/expapi/verbs/posted",
+    "display": {"en-US": "posted"}
+  },
+  "object": {
+    "id": "https://bb.example.com/courses/ENG101/discussions/12345/post/876",
+    "definition": {
+      "type": "http://id.tincanapi.com/activitytype/discussion",
+      "name": {"en-US": "Discussion Post"}
+    }
+  },
+  "context": {
+    "instructor": [
+      { "objectType": "Agent", "account": {"name": "instructor_1123"} }
+    ],
+    "contextActivities": {
+      "grouping": [
+        { "id": "https://bb.example.com/institution/UniversityA" },
+        { "id": "https://bb.example.com/course/ENG101" }
+      ],
+      "parent": [
+        { "id": "https://bb.example.com/section/ENG101-F23-001" }
+      ]
+    }
+  }
+}
+```
+
+# 3. Final Deliverable Coverage
+
+Your request is now fully covered for:
+
+Full Blackboard Ultra → xAPI event mapping dictionary
+
+Complete xAPI samples across:
+
+Institutional metadata (university/college/program/department)
+
+Courses, sections, terms
+
+Instructors
+
+Content
+
+Assignments
+
+Assessments
+
+Discussions
+
+Access & navigation
+
+Collaboration sessions
+
+This is ready for implementation in your central multi-university LRS.
   "timestamp": "2024-02-15T09:32:12Z"
 }
