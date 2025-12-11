@@ -119,9 +119,11 @@ Tracks: university → college → department → program → course → section
       ]
     }
   },
+  "timestamp": "2024-02-15T09:32:12Z"
+}
 ```
 
-2.2 Sample: Instructor Viewed Course Roster
+## 2.2 Sample: Instructor Viewed Course Roster
 ```json
 {
   "actor": {
@@ -226,8 +228,10 @@ Tracks: university → college → department → program → course → section
     }
   }
 }
+```
 
 ## 2.5 Sample: Instructor Posted to Discussion
+```json
 {
   "actor": {
     "objectType": "Agent",
@@ -288,5 +292,3 @@ Access & navigation
 Collaboration sessions
 
 This is ready for implementation in your central multi-university LRS.
-  "timestamp": "2024-02-15T09:32:12Z"
-}
